@@ -1,0 +1,77 @@
+.sidenav-container {
+  height: 100%;
+}
+.sidenav {
+  width: 260px;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.mat-expansion-panel-spacing {
+  margin: 0px;
+}
+.mat-expansion-panel-header{
+  padding: 0px 16px;
+}
+.mat-expansion-panel:not([class*=mat-elevation-z]){
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 0%), 
+  0px 2px 2px 0px rgb(0 0 0 / 0%), 
+  0px 1px 5px 0px rgb(0 0 0 / 0%);
+};
+.mat-nav-list .mat-list-item:focus{
+  background: #ff9e43;
+  box-shadow: 0 2px 1px -1px 
+rgb(0 0 0 / 20%), 
+  0 1px 1px 0 rgb(0 0 0 / 14%), 
+  0 1px 3px 0 rgb(0 0 0 / 12%);
+  border-radius: 4px;
+}
+ .mat-list-base{
+   padding: 0px 12px;
+ }
+ .mat-list-base .mat-list-item, .mat-expansion-panel-header{
+  font-size: 14.5px;
+}
+.mat-expansion-panel-body{
+  padding: 0px !important;
+}
+.nav-icon {
+  height: 20px;
+  width: 34px;
+  font-size: 20px;
+}
+::ng-deep .mat-expansion-panel-body{
+  padding: 0px 0px 3px!important;
+}
+.dropdown-item{
+  padding-left: 24px!important;
+  width: 88% !important;
+}
+::ng-deep .dropdown-item  .mat-list-item-ripple{
+  margin-left: -24px!important;
+}
+.mat-drawer-side {
+  border-right: solid 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 1px -1px 
+rgb(0 0 0 / 20%), 
+  0 1px 1px 0 rgb(0 0 0 / 14%), 
+  0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+
+mat-toolbar{
+  .content-spacer{
+    margin: auto;
+  }
+  .user-face{
+    width: 44px;
+    border-radius: 22px;
+    height: 42px;
+    margin: 10px;
+  }
+}

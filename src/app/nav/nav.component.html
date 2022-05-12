@@ -1,0 +1,124 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar><img src="\assets\img\logo.svg" alt="Logo"></mat-toolbar>
+    <span class="example-spacer"></span>
+    <mat-nav-list>
+      <!-- dashboard -->
+      <a mat-list-item [routerLink]="['/home']" [routerLinkActive]="['active']">
+        <mat-icon class="nav-icon" role="img">dashboard</mat-icon>dashborad</a>
+
+        <!-- Apps -->
+      <mat-expansion-panel disabled>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Apps</mat-panel-title>
+        </mat-expansion-panel-header>
+      </mat-expansion-panel>
+
+      <!--Dropdown-item -->
+      <mat-accordion class="example-headers-align">
+        <mat-expansion-panel class="panel-01" >
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">desktop_windows</mat-icon>Order</mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">All Order</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Create Manual Order</a>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">style</mat-icon>Products</mat-panel-title>
+          </mat-expansion-panel-header>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">All Products</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Add New Product</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">All Product Brands</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">All Product Categories</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Products Inventory</a>
+          <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Bulk Update Products</a>
+        </mat-expansion-panel>
+      
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">color_lens</mat-icon>Inventory</mat-panel-title>
+          </mat-expansion-panel-header>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Purchase Orders</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Inventory Transfers</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Suppliers</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Inventory Locations</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Bulk Inventory Entry</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">nature_people</mat-icon>Customers</mat-panel-title>
+          </mat-expansion-panel-header>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">All Custommer</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Manage Customer Groups</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">add_shopping_cart</mat-icon>Online Store</mat-panel-title>
+          </mat-expansion-panel-header>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Themes</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Theme Customization</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Navigation</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Pages</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">tune</mat-icon>Settings</mat-panel-title>
+          </mat-expansion-panel-header>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">General Settings</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Check Out Settings</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Payment Methodes</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Shoppings Methodes</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Tax Rate</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Notifications</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">User</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title><mat-icon class="nav-icon">perm_identity</mat-icon>Profile</mat-panel-title>
+          </mat-expansion-panel-header>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Update Profile</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Change Password</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Login</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['table']" [routerLinkActive]="['active']">Register</a>
+            <a class="dropdown-item" mat-list-item [routerLink]="['user']" [routerLinkActive]="['active']">Log Out</a>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <!--Dropdown-item End-->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>app-dashboard</span>
+      <span class="example-spacer content-spacer"></span>
+      <div class="nav-content">
+        <button mat-button [matMenuTriggerFor]="menu">
+          <img class="user-face" src="https://www.pngfind.com/pngs/m/655-6552449_ali-a-png-persons-face-png-transparent-png.png" alt="">
+          
+          Didar Hasan</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Settings</button>
+          <button mat-menu-item>Log Out</button>
+        </mat-menu>
+      </div>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
